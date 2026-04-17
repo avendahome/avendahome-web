@@ -4,53 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avenda Home | Doğal Soya Mumları</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Avenda Home | Premium Soya Mumları</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 20px;
+        }
+
+        .hero-p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .feature-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent);
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
 </head>
 
 <body>
-
-    <nav>
-        <div class="logo">AVENDA HOME</div>
-    </nav>
+    <nav><a href="index.html" class="logo">AVENDA HOME</a></nav>
 
     <header class="hero">
         <div class="hero-content">
-            <h1>Doğanın Saf Dokunuşu</h1>
-            <p>Mersin'de özenle hazırlanan %100 doğal soya mumları ve özel tasarım aksesuarlar.</p>
-            <a href="https://www.trendyol.com/magaza/avenda-home-m-1186583" class="btn-primary"
-                target="_blank">Trendyol'da Mağazayı Gez</a>
+            <h1 class="hero-h1">Asalet Işıkla Başlar</h1>
+            <p class="hero-p">Mersin atölyemizde %100 doğal soya wax ve artizan esanslarla dökülen, ruhunuzu dinlendiren
+                bir deneyim.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://www.trendyol.com/magaza/avenda-home-m-1186583" class="btn btn-primary"
+                    target="_blank">Koleksiyonu Keşfet</a>
+                <a href="bakim.html" class="btn" style="color: var(--text-muted); border: 1px solid #333;">Bakım Rehberi
+                    →</a>
+            </div>
         </div>
     </header>
 
-    <section class="about">
-        <div class="container">
-            <h2>Neden Avenda Home?</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>%100 Doğal Soya</h3>
-                    <p>Parafin içermeyen, temiz yanış sağlayan doğa dostu içerik.</p>
-                </div>
-                <div class="feature">
-                    <h3>Yoğun Esans</h3>
-                    <p>%10 esans oranıyla odayı saran kalıcı ve ferah kokular.</p>
-                </div>
-                <div class="feature">
-                    <h3>Butik Üretim</h3>
-                    <p>Her bir ürün, Mersin'deki atölyemizde tek tek ve özenle dökülür.</p>
-                </div>
-            </div>
+    <section class="feature-grid">
+        <div class="feature-card">
+            <h3>Doğal İçerik</h3>
+            <p>Parafin içermeyen, %100 saf soya wax ile temiz ve uzun süreli yanış.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Mersin Ruhu</h3>
+            <p>Her ürünümüz, Akdeniz'in sıcaklığıyla Mersin'de tek tek elden geçer.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Yoğun Aroma</h3>
+            <p>%10 esans oranıyla yaşam alanınızın atmosferini anında değiştirir.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Avenda Home. Tüm hakları saklıdır.</p>
-        <p><small>info@avendahome.com</small></p>
+        <span class="footer-logo">AVENDA HOME</span>
+        <p class="footer-text">© 2026 MERSİN. Tüm Hakları Saklıdır.</p>
     </footer>
-
 </body>
 
 </html>
