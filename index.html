@@ -1,106 +1,98 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avenda Home | Premium Soya Mumları</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .hero {
-            height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .hero-h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            margin-bottom: 20px;
-        }
-
-        .hero-p {
-            max-width: 600px;
-            margin: 0 auto 40px;
-            color: var(--text-muted);
-            font-weight: 300;
-        }
-
-        .feature-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 40px 20px;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border: 1px solid var(--border);
-            transition: 0.3s;
-        }
-
-        .feature-card:hover {
-            border-color: var(--accent);
-        }
-
-        .feature-card h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--accent);
-            margin-bottom: 15px;
-        }
-
-        .feature-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-    </style>
 </head>
-
 <body>
-    <nav><a href="index.html" class="logo">AVENDA HOME</a></nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="hero-h1">Asalet Işıkla Başlar</h1>
-            <p class="hero-p">Mersin atölyemizde %100 doğal soya wax ve artizan esanslarla dökülen, ruhunuzu dinlendiren
-                bir deneyim.</p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://www.trendyol.com/magaza/avenda-home-m-1186583" class="btn btn-primary"
-                    target="_blank">Koleksiyonu Keşfet</a>
-                <a href="bakim.html" class="btn" style="color: var(--text-muted); border: 1px solid #333;">Bakım Rehberi
-                    →</a>
-            </div>
-        </div>
-    </header>
+<nav>
+    <a href="index.html" class="logo">AVENDA HOME</a>
+</nav>
 
-    <section class="feature-grid">
-        <div class="feature-card">
-            <h3>Doğal İçerik</h3>
-            <p>Parafin içermeyen, %100 saf soya wax ile temiz ve uzun süreli yanış.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Mersin Ruhu</h3>
-            <p>Her ürünümüz, Akdeniz'in sıcaklığıyla Mersin'de tek tek elden geçer.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Yoğun Aroma</h3>
-            <p>%10 esans oranıyla yaşam alanınızın atmosferini anında değiştirir.</p>
-        </div>
-    </section>
+<header class="hero">
+    <div class="hero-content">
+        <h1>Işığın Kokuyla Buluştuğu Yer</h1>
+        <p>
+            Mersin atölyemizde el dökümü hazırlanan %100 doğal soya mumlarımızla
+            yaşam alanlarınıza zarafet ve huzur taşıyoruz.
+        </p>
+        <a href="#koleksiyon" class="btn btn-primary">Koleksiyonu Keşfet</a>
+    </div>
+</header>
 
-    <footer>
-        <span class="footer-logo">AVENDA HOME</span>
-        <p class="footer-text">© 2026 MERSİN. Tüm Hakları Saklıdır.</p>
-    </footer>
+<section class="products" id="koleksiyon">
+    <h2 class="section-title">Koleksiyon</h2>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="images/sandal.jpg" alt="Sandal Ağacı" class="product-img">
+            <span class="note">Woody</span>
+            <h3>Sandal Ağacı</h3>
+            <p>Derin ve meditatif odunsu notalar.</p>
+            <a href="https://www.trendyol.com/avenda-home/sandal-agaci-kokulu-100-dogal-soya-aromaterapi-mum-premium-amber-cam-kavanoz-hediye-kutulu-100cc-p-1137941532?merchantId=1186583&boutiqueId=61" target="_blank" class="btn btn-primary">İncele</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/yasemin.jpg" alt="Yasemin" class="product-img">
+            <span class="note">Floral</span>
+            <h3>Yasemin</h3>
+            <p>Zarif ve romantik çiçeksi dokunuş.</p>
+            <a href="https://www.trendyol.com/avenda-home/yasemin-kokulu-100-dogal-soya-aromaterapi-mum-premium-amber-cam-kavanoz-hediye-kutulu-100-cc-p-1137941712" target="_blank" class="btn btn-primary">İncele</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pembegul.jpg" alt="Pembe Gül" class="product-img">
+            <span class="note">Soft Floral</span>
+            <h3>Pembe Gül</h3>
+            <p>Klasik gülün modern yorumu.</p>
+            <a href="https://www.trendyol.com/avenda-home/pembe-gul-kokulu-100-dogal-soya-aromaterapi-mum-premium-amber-cam-kavanoz-hediye-kutulu-100-cc-p-1137941658" target="_blank" class="btn btn-primary">İncele</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/amber.jpg" alt="Amber" class="product-img">
+            <span class="note">Oriental</span>
+            <h3>Amber</h3>
+            <p>Sıcak, yoğun ve sofistike.</p>
+            <a href="https://www.trendyol.com/avenda-home/amber-kokulu-100-dogal-soya-aromaterapi-mum-premium-amber-cam-kavanoz-hediye-kutulu-100-cc-p-1137941719" target="_blank" class="btn btn-primary">İncele</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/vanilya.jpg" alt="Vanilya" class="product-img">
+            <span class="note">Sweet</span>
+            <h3>Vanilya</h3>
+            <p>Yumuşak ve huzurlu ev atmosferi.</p>
+            <a href="https://www.trendyol.com/avenda-home/vanilya-kokulu-100-dogal-soya-aromaterapi-mum-premium-amber-cam-kavanoz-hediye-kutulu-100-cc-p-1137941725" target="_blank" class="btn btn-primary">İncele</a>
+        </div>
+
+        <div class="product-card">
+            <img src="images/lavanta.jpg" alt="Lavanta" class="product-img">
+            <span class="note">Relaxing</span>
+            <h3>Lavanta</h3>
+            <p>Dinginlik ve rahatlama ritüeli.</p>
+            <a href="https://www.trendyol.com/avenda-home/lavanta-kokulu-100-dogal-soya-aromaterapi-mum-premium-amber-cam-kavanoz-hediye-kutulu-100-cc-p-1137941675" target="_blank" class="btn btn-primary">İncele</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="about">
+    <h2>Mersin’de El Dökümü</h2>
+    <p>
+        Her Avenda Home mumu küçük partiler halinde,
+        %100 doğal soya wax ile özenle hazırlanır.
+    </p>
+</section>
+
+<footer>
+    <span class="footer-logo">AVENDA HOME</span>
+    <p class="footer-text">Premium Soya Mum Koleksiyonu</p>
+</footer>
+
 </body>
-
 </html>

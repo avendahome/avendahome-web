@@ -1,129 +1,205 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritüel & Bakım | Avenda Home</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <title>Bakım & Ritüel | Avenda Home</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <style>
-        .guide-container {
-            max-width: 700px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .guide-header {
+        .ritual-hero {
+            padding: 120px 20px 80px;
             text-align: center;
-            margin-bottom: 60px;
         }
 
-        .guide-header h1 {
+        .ritual-hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 20px;
         }
 
-        .card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 4px;
-            border-left: 3px solid var(--accent);
+        .ritual-subtitle {
+            color: var(--accent);
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
             margin-bottom: 25px;
         }
 
-        .card h2 {
+        .ritual-intro {
+            max-width: 700px;
+            margin: auto;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .ritual-grid {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+            display: grid;
+            gap: 28px;
+        }
+
+        .ritual-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 35px;
+            transition: .35s ease;
+        }
+
+        .ritual-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .ritual-number {
+            color: var(--accent);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+
+        .ritual-card h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 14px;
+            font-size: 1.5rem;
+        }
+
+        .ritual-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .safety-box {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 50px;
+            border: 1px solid rgba(212,175,55,0.25);
+            background: rgba(255,255,255,0.02);
+        }
+
+        .safety-box h3 {
+            text-align: center;
             font-family: 'Playfair Display', serif;
             color: var(--accent);
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            margin-bottom: 35px;
         }
 
-        .card p {
-            font-size: 0.95rem;
-            font-weight: 300;
-        }
-
-        .protocol {
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 30px;
-            margin-top: 60px;
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .protocol h3 {
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            color: var(--accent);
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .protocol ul {
+        .safety-list {
             list-style: none;
-            padding: 0;
         }
 
-        .protocol li {
-            font-size: 0.85rem;
+        .safety-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
             color: var(--text-muted);
-            margin-bottom: 12px;
-            display: flex;
-            gap: 10px;
         }
 
-        .protocol li::before {
-            content: "•";
-            color: var(--accent);
+        .back-wrap {
+            text-align: center;
+            margin: 70px 0;
+        }
+
+        .closing-note {
+            max-width: 700px;
+            margin: 0 auto 100px;
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+            line-height: 1.8;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .safety-box {
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
-
 <body>
-    <nav><a href="index.html" class="logo">AVENDA HOME</a></nav>
 
-    <div class="guide-container">
-        <header class="guide-header">
-            <h1>Bakım & Ritüel</h1>
-            <p style="color: var(--accent); font-style: italic; opacity: 0.8;">Mumu yakmadan önce mutlaka okuyunuz.</p>
-        </header>
+<nav>
+    <a href="index.html" class="logo">AVENDA HOME</a>
+</nav>
 
-        <div class="card">
-            <h2>Mum Hafızası</h2>
-            <p>İlk yakışta üst yüzey tamamen sıvılaşana kadar (2-3 saat) söndürmeyin. Bu ritüel, tünel oluşumunu
-                engeller.</p>
-        </div>
+<section class="ritual-hero">
+    <div class="ritual-subtitle">Bakım Rehberi</div>
+    <h1>Mum Bir Ritüeldir</h1>
+    <p class="ritual-intro">
+        Her Avenda Home mumu, doğru kullanımda aromasını daha dengeli yayar,
+        daha uzun ömürlü olur ve bulunduğu alana kusursuz bir atmosfer kazandırır.
+    </p>
+</section>
 
-        <div class="card">
-            <h2>Fitil Yönetimi</h2>
-            <p>Her yakıştan önce fitili 5mm boyuna kısaltın. Temiz bir yanışın sırrı budur.</p>
-        </div>
+<section class="ritual-grid">
 
-        <div class="card">
-            <h2>Doğal Doku</h2>
-            <p>Soya wax doğaldır; yanma sonrası yüzeyde hafif pürüzler görülebilir. Bu ürünün saflığının tescilidir.</p>
-        </div>
-
-        <div class="protocol">
-            <h3>GÜVENLİK PROTOKOLÜ</h3>
-            <ul>
-                <li>Yanan mumu asla gözetimsiz bırakmayın.</li>
-                <li>Hava akımı (klima, rüzgar) olan yerlerde yakmayın.</li>
-                <li>Çocuklardan ve evcil hayvanlardan uzak, güvenli alanda tutun.</li>
-                <li>Tek seferde 4 saatten fazla yakmamanız önerilir.</li>
-            </ul>
-        </div>
-
-        <center><a href="index.html" class="btn" style="color: var(--text-muted); margin-top: 40px;">← ANA SAYFAYA
-                DÖN</a></center>
+    <div class="ritual-card">
+        <div class="ritual-number">01</div>
+        <h2>İlk Yakış</h2>
+        <p>
+            İlk kullanımda üst yüzey tamamen sıvılaşana kadar bekleyin.
+            Bu, mum hafızasını oluşturur ve tünel yanışını önler.
+        </p>
     </div>
 
-    <footer>
-        <span class="footer-logo">AVENDA HOME</span>
-        <p class="footer-text">Mersin'de Özenle Hazırlandı.</p>
-    </footer>
-</body>
+    <div class="ritual-card">
+        <div class="ritual-number">02</div>
+        <h2>Fitil Dengesi</h2>
+        <p>
+            Her yakıştan önce fitili yaklaşık 5 mm uzunluğa kısaltın.
+            Böylece daha temiz, dengeli ve is bırakmayan bir yanış sağlanır.
+        </p>
+    </div>
 
+    <div class="ritual-card">
+        <div class="ritual-number">03</div>
+        <h2>Doğal Yüzey</h2>
+        <p>
+            Soya wax doğal bir hammaddedir. Zaman zaman yüzeyde pürüz veya
+            hafif kristalleşme görülebilir; bu kalite göstergesidir.
+        </p>
+    </div>
+
+    <div class="ritual-card">
+        <div class="ritual-number">04</div>
+        <h2>Aroma Performansı</h2>
+        <p>
+            Mumu küçük veya orta ölçekli kapalı alanlarda kullanmanız,
+            kokunun dengeli şekilde yayılması için idealdir.
+        </p>
+    </div>
+
+</section>
+
+<section class="safety-box">
+    <h3>Güvenlik Protokolü</h3>
+
+    <ul class="safety-list">
+        <li>Yanan mumu gözetimsiz bırakmayın.</li>
+        <li>Yanıcı materyallerden uzak tutun.</li>
+        <li>Çocukların ve evcil hayvanların erişemeyeceği yerde konumlandırın.</li>
+        <li>Hava akımı olan alanlarda kullanmayın.</li>
+        <li>Tek kullanımda 4 saati aşmayın.</li>
+    </ul>
+</section>
+
+<div class="closing-note">
+    “Bir mum yalnızca ışık vermez; bulunduğu alanın ruhunu değiştirir.”
+</div>
+
+<div class="back-wrap">
+    <a href="index.html" class="btn">Ana Sayfaya Dön</a>
+</div>
+
+<footer>
+    <span class="footer-logo">AVENDA HOME</span>
+    <p class="footer-text">Mersin’de El Dökümü Premium Soya Mumları</p>
+</footer>
+
+</body>
 </html>
