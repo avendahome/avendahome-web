@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bakım & Ritüel | Avenda Home</title>
+<title>Ritüel & Bakım | Avenda Home</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -15,11 +15,24 @@
     padding: 0 20px;
 }
 
+.hero-note {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
 .card {
     background: var(--card-bg);
     border-left: 3px solid var(--accent);
-    padding: 25px;
+    padding: 28px;
     margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-left-width: 6px;
 }
 
 .card h2 {
@@ -30,16 +43,15 @@
 
 .card p {
     color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
-/* mum glow hissi */
+/* mum glow */
 .candle-glow {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%);
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(212,175,55,0.10), transparent 65%);
     z-index: -1;
 }
 </style>
@@ -55,39 +67,57 @@
 
 <div class="guide">
 
-    <h1 style="text-align:center; font-family: Playfair Display; color: var(--accent);">
-        Bakım & Ritüel
+    <h1 style="text-align:center; font-family: Playfair Display; color: var(--accent); font-size:2.2rem;">
+        Ritüel Rehberi
     </h1>
 
-    <p style="text-align:center; color: var(--text-muted); margin-bottom:40px;">
-        Mum yakmak bir ritüeldir.
+    <p class="hero-note">
+        Bir mum sadece ışık değildir.  
+        <br>
+        <span style="color: var(--accent);">
+            Atmosferin, zihnin ve anın dönüşümüdür.
+        </span>
     </p>
 
     <div class="card">
-        <h2>İlk Yakış</h2>
-        <p>Üst yüzey tamamen eriyene kadar söndürmeyin (2-3 saat).</p>
+        <h2>İlk Yakış — Hafıza Oluşumu</h2>
+        <p>
+            Mumun üst yüzeyi tamamen sıvı hale gelene kadar (yaklaşık 2–3 saat) söndürmeyin.  
+            Bu an, mumun “hafızasını” oluşturur.  
+            Doğru yapılmazsa tünel oluşur, ama doğru yapılırsa mum ömrü uzar ve yanış kusursuz olur.
+        </p>
     </div>
 
     <div class="card">
-        <h2>Fitil</h2>
-        <p>Her kullanım öncesi 5mm kısaltın.</p>
+        <h2>Fitil — Sessiz Kontrol</h2>
+        <p>
+            Her yakıştan önce fitili 5 mm’ye kadar kısaltın.  
+            Bu küçük detay, dumanı azaltır, alevi dengeler ve kokunun daha temiz yayılmasını sağlar.
+        </p>
     </div>
 
     <div class="card">
-        <h2>Doğal Yapı</h2>
-        <p>Soya wax doğası gereği yüzeyde hafif doku bırakabilir.</p>
+        <h2>Soya Wax — Doğanın İmzası</h2>
+        <p>
+            Yüzeyde oluşan küçük dalgalanmalar kusur değil, doğallığın işaretidir.  
+            Her mum tek tek dökülür, seri üretim değil; el emeği ritüelidir.
+        </p>
     </div>
 
     <div class="card">
-        <h2>Güvenlik</h2>
-        <p>Gözetimsiz bırakmayın. 4 saatten uzun yakmayın.</p>
+        <h2>Güvenlik — Zarafet İçinde Denge</h2>
+        <p>
+            Mum asla gözetimsiz bırakılmamalıdır.  
+            4 saatten uzun kullanım önerilmez.  
+            Avenda Home, sadece atmosfer değil; güvenli bir deneyim sunar.
+        </p>
     </div>
 
 </div>
 
 <footer>
     <span class="footer-logo">AVENDA HOME</span>
-    <p class="footer-text">Ritüel Deneyimi</p>
+    <p class="footer-text">Bir Mumdan Daha Fazlası</p>
 </footer>
 
 </body>
