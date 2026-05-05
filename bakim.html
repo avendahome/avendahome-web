@@ -10,24 +10,52 @@
 
     <style>
         body {
-            background: radial-gradient(circle at top, rgba(212,175,55,0.08), #0a0a0a 60%);
+            background: #0a0a0a;
+            overflow-x: hidden;
+        }
+
+        /* 🔥 mum glow efekti */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 50% 30%, rgba(212,175,55,0.10), transparent 40%),
+                radial-gradient(circle at 20% 70%, rgba(255,140,0,0.05), transparent 50%);
+            z-index: -2;
+        }
+
+        /* hafif “yanan mum gölgesi” */
+        body::after {
+            content: "";
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212,175,55,0.15), transparent 70%);
+            filter: blur(60px);
+            z-index: -1;
+            opacity: 0.6;
         }
 
         .ritual {
             max-width: 720px;
             margin: auto;
-            padding: 40px 18px 100px;
+            padding: 50px 18px 100px;
         }
 
         .hero {
             text-align: center;
-            padding: 60px 10px 30px;
+            padding: 70px 10px 30px;
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.6rem;
             margin-bottom: 10px;
+            color: var(--text);
         }
 
         .hero p {
@@ -107,15 +135,6 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-
-        /* QR vibe enhancement */
-        .glow-line {
-            height: 1px;
-            width: 60px;
-            background: var(--accent);
-            margin: 20px auto;
-            opacity: 0.5;
-        }
     </style>
 </head>
 
@@ -126,61 +145,48 @@
     <div class="hero">
         <p>AVENDA HOME RİTÜELİ</p>
         <h1>Mumu Sadece Yakma</h1>
-        <div class="glow-line"></div>
     </div>
 
     <p class="intro">
-        Bu mum bir obje değil — bir atmosfer yaratma aracıdır.  
+        Bu mum sadece ışık değildir — bir atmosfer yaratma aracıdır.  
         Doğru kullanıldığında mekânın enerjisini değiştirir.
     </p>
 
     <div class="step">
         <span>ADIM 01</span>
-        <h2>İlk Yakış Ritüeli</h2>
-        <p>
-            Mumu ilk yaktığında yüzey tamamen sıvı hale gelene kadar söndürme.
-            Bu hafıza oluşturur ve ömrünü uzatır.
-        </p>
+        <h2>İlk Yakış</h2>
+        <p>Mumu ilk yaktığında yüzey tamamen sıvı hale gelene kadar söndürme.</p>
     </div>
 
     <div class="step">
         <span>ADIM 02</span>
         <h2>Fitil Dengesi</h2>
-        <p>
-            Her kullanım öncesi fitili 5 mm bırak.  
-            Bu küçük detay, temiz ve dengeli yanış sağlar.
-        </p>
+        <p>Her kullanım öncesi fitili 5 mm bırak. Temiz yanışın anahtarıdır.</p>
     </div>
 
     <div class="step">
         <span>ADIM 03</span>
-        <h2>Aroma Yayılımı</h2>
-        <p>
-            Mum küçük ve orta alanlarda en güçlü performansı verir.  
-            Kapalı ortamda kokusu daha rafine hissedilir.
-        </p>
+        <h2>Aroma Alanı</h2>
+        <p>Küçük ve orta alanlarda kokunun yayılımı en ideal seviyededir.</p>
     </div>
 
     <div class="step">
         <span>ADIM 04</span>
-        <h2>Doğal Yüzey</h2>
-        <p>
-            Soya wax canlı bir malzemedir.  
-            Yüzeydeki küçük değişimler doğallığın işaretidir.
-        </p>
+        <h2>Doğal Doku</h2>
+        <p>Soya wax doğaldır; yüzeydeki küçük değişimler saflığın işaretidir.</p>
     </div>
 
     <div class="warning">
         <h3>Güvenlik</h3>
         <p>
-            Yanan mumu asla yalnız bırakma.  
+            Yanan mumu gözetimsiz bırakma.  
             Hava akımı olan alanlarda kullanma.  
             Çocuklardan ve evcil hayvanlardan uzak tut.
         </p>
     </div>
 
     <div class="back">
-        <a href="index.html">← Ana Sayfaya Dön</a>
+        <a href="index.html">← Ana Sayfa</a>
     </div>
 
 </div>
