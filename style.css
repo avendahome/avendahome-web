@@ -47,21 +47,43 @@ body::before {
    NAV
 ===================== */
 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 25px;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
+
+    border-bottom: 1px solid rgba(212,175,55,0.25); /* ALTIN ÇİZGİ */
     position: sticky;
     top: 0;
+
     background: rgba(10,10,10,0.85);
     backdrop-filter: blur(15px);
+    z-index: 1000;
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 1.6rem;
-    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 1px solid rgba(212,175,55,0.6); /* ALTIN ÇERÇEVE */
+    padding: 3px; /* premium boşluk */
+
+    transition: 0.3s;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(212,175,55,0.15);
 }
 
 /* =====================
@@ -209,6 +231,7 @@ nav {
     font-size: 0.75rem;
     color: var(--text-muted);
     margin: 8px 0;
+    padding-bottom: 10px;
 }
 
 /* =====================
@@ -216,13 +239,55 @@ nav {
 ===================== */
 .about {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 100px auto;
     padding: 0 20px;
 }
 
 .about h2 {
     font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.7;
+}
+
+/* WIDGET GRID */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.info-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.info-card h3 {
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.info-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
 /* =====================
@@ -252,3 +317,5 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
 }
+
+
