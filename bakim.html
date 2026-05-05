@@ -3,56 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ritüel & Bakım | Avenda Home</title>
+<title>Ritüel Rehberi | Avenda Home</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
 <style>
 .guide {
-    max-width: 750px;
-    margin: 60px auto;
+    max-width: 780px;
+    margin: 70px auto;
     padding: 0 20px;
 }
 
+/* HEADER */
 .hero-note {
     text-align: center;
     color: var(--text-muted);
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto 50px;
+    line-height: 1.8;
 }
 
+.page-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+/* CARD */
 .card {
-    background: var(--card-bg);
+    background: linear-gradient(145deg, #141414, #0d0d0d);
+    border: 1px solid rgba(212,175,55,0.12);
     border-left: 3px solid var(--accent);
     padding: 28px;
     margin-bottom: 20px;
-    transition: 0.3s;
+    transition: 0.35s;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     border-left-width: 6px;
+    border-color: rgba(212,175,55,0.5);
 }
 
 .card h2 {
     font-family: 'Playfair Display', serif;
     color: var(--accent);
     margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
 .card p {
     color: var(--text-muted);
     font-size: 0.95rem;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
-/* mum glow */
+/* LOGO */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+.logo-img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 1px solid rgba(212,175,55,0.6);
+    padding: 3px;
+    object-fit: cover;
+}
+
+/* GLOW */
 .candle-glow {
     position: fixed;
     inset: 0;
     background: radial-gradient(circle at center, rgba(212,175,55,0.10), transparent 65%);
     z-index: -1;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 80px;
+}
+
+.footer-text {
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
 </style>
 </head>
@@ -61,19 +106,18 @@
 
 <div class="candle-glow"></div>
 
-<nav>
-    <a href="index.html" class="logo">AVENDA HOME</a>
-</nav>
+<!-- NAV -->
+<div class="navbar">
+    <img src="images/logo.png" class="logo-img" alt="Avenda Home">
+</div>
 
+<!-- CONTENT -->
 <div class="guide">
 
-    <h1 style="text-align:center; font-family: Playfair Display; color: var(--accent); font-size:2.2rem;">
-        Ritüel Rehberi
-    </h1>
+    <h1 class="page-title">Ritüel Rehberi</h1>
 
     <p class="hero-note">
-        Bir mum sadece ışık değildir.  
-        <br>
+        Bir mum sadece ışık değildir.<br>
         <span style="color: var(--accent);">
             Atmosferin, zihnin ve anın dönüşümüdür.
         </span>
@@ -81,40 +125,27 @@
 
     <div class="card">
         <h2>İlk Yakış — Hafıza Oluşumu</h2>
-        <p>
-            Mumun üst yüzeyi tamamen sıvı hale gelene kadar (yaklaşık 2–3 saat) söndürmeyin.  
-            Bu an, mumun “hafızasını” oluşturur.  
-            Doğru yapılmazsa tünel oluşur, ama doğru yapılırsa mum ömrü uzar ve yanış kusursuz olur.
-        </p>
+        <p>Mumun üst yüzeyi tamamen sıvı hale gelene kadar (2–3 saat) söndürmeyin. Bu, mumun hafızasını oluşturur ve kusursuz yanış sağlar.</p>
     </div>
 
     <div class="card">
         <h2>Fitil — Sessiz Kontrol</h2>
-        <p>
-            Her yakıştan önce fitili 5 mm’ye kadar kısaltın.  
-            Bu küçük detay, dumanı azaltır, alevi dengeler ve kokunun daha temiz yayılmasını sağlar.
-        </p>
+        <p>Her yakıştan önce fitili 5 mm’ye kadar kısaltın. Bu detay temiz, dengeli ve kokunun doğru yayılmasını sağlar.</p>
     </div>
 
     <div class="card">
-        <h2>Soya Wax — Doğanın İmzası</h2>
-        <p>
-            Yüzeyde oluşan küçük dalgalanmalar kusur değil, doğallığın işaretidir.  
-            Her mum tek tek dökülür, seri üretim değil; el emeği ritüelidir.
-        </p>
+        <h2>Soya Wax — Doğallığın İmzası</h2>
+        <p>Yüzeyde oluşan küçük dokular kusur değil, el döküm doğallığının imzasıdır.</p>
     </div>
 
     <div class="card">
         <h2>Güvenlik — Zarafet İçinde Denge</h2>
-        <p>
-            Mum asla gözetimsiz bırakılmamalıdır.  
-            4 saatten uzun kullanım önerilmez.  
-            Avenda Home, sadece atmosfer değil; güvenli bir deneyim sunar.
-        </p>
+        <p>Mum gözetimsiz bırakılmamalıdır. 4 saatten uzun kullanım önerilmez.</p>
     </div>
 
 </div>
 
+<!-- FOOTER -->
 <footer>
     <span class="footer-logo">AVENDA HOME</span>
     <p class="footer-text">Bir Mumdan Daha Fazlası</p>
