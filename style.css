@@ -73,7 +73,7 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 
 .hero-content h1 {
@@ -125,7 +125,7 @@ nav {
 .gift-banner {
     text-align: center;
     padding: 12px;
-    margin: 10px auto 20px;
+    margin: 0px auto 0px;
     max-width: 900px;
     border: 1px solid rgba(212,175,55,0.3);
     background: rgba(212,175,55,0.05);
@@ -139,7 +139,7 @@ nav {
 .products {
     max-width: 1200px;
     margin: auto;
-    padding: 80px 20px;
+    padding: 30px 20px;
 }
 
 .section-title {
@@ -244,4 +244,11 @@ footer {
 .footer-text {
     color: var(--text-muted);
     font-size: 0.85rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
