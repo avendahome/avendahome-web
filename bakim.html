@@ -1,195 +1,94 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritüel & Bakım | Avenda Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bakım & Ritüel | Avenda Home</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            background: #0a0a0a;
-            overflow-x: hidden;
-        }
+<style>
+.guide {
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
 
-        /* 🔥 mum glow efekti */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background:
-                radial-gradient(circle at 50% 30%, rgba(212,175,55,0.10), transparent 40%),
-                radial-gradient(circle at 20% 70%, rgba(255,140,0,0.05), transparent 50%);
-            z-index: -2;
-        }
+.card {
+    background: var(--card-bg);
+    border-left: 3px solid var(--accent);
+    padding: 25px;
+    margin-bottom: 20px;
+}
 
-        /* hafif “yanan mum gölgesi” */
-        body::after {
-            content: "";
-            position: fixed;
-            bottom: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(212,175,55,0.15), transparent 70%);
-            filter: blur(60px);
-            z-index: -1;
-            opacity: 0.6;
-        }
+.card h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
 
-        .ritual {
-            max-width: 720px;
-            margin: auto;
-            padding: 50px 18px 100px;
-        }
+.card p {
+    color: var(--text-muted);
+}
 
-        .hero {
-            text-align: center;
-            padding: 70px 10px 30px;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.6rem;
-            margin-bottom: 10px;
-            color: var(--text);
-        }
-
-        .hero p {
-            color: var(--accent);
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .intro {
-            text-align: center;
-            color: var(--text-muted);
-            margin: 25px auto 60px;
-            line-height: 1.8;
-        }
-
-        .step {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 25px;
-            margin-bottom: 18px;
-            transition: 0.3s;
-        }
-
-        .step:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-        }
-
-        .step span {
-            color: var(--accent);
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-        }
-
-        .step h2 {
-            font-family: 'Playfair Display', serif;
-            margin: 10px 0;
-            font-size: 1.4rem;
-        }
-
-        .step p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .warning {
-            margin-top: 50px;
-            border: 1px solid rgba(212,175,55,0.25);
-            padding: 25px;
-            text-align: center;
-            background: rgba(255,255,255,0.02);
-        }
-
-        .warning h3 {
-            color: var(--accent);
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 15px;
-        }
-
-        .warning p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-
-        .back {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .back a {
-            text-decoration: none;
-            color: var(--accent);
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-    </style>
+/* mum glow hissi */
+.candle-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%);
+    z-index: -1;
+}
+</style>
 </head>
 
 <body>
 
-<div class="ritual">
+<div class="candle-glow"></div>
 
-    <div class="hero">
-        <p>AVENDA HOME RİTÜELİ</p>
-        <h1>Mumu Sadece Yakma</h1>
-    </div>
+<nav>
+    <a href="index.html" class="logo">AVENDA HOME</a>
+</nav>
 
-    <p class="intro">
-        Bu mum sadece ışık değildir — bir atmosfer yaratma aracıdır.  
-        Doğru kullanıldığında mekânın enerjisini değiştirir.
+<div class="guide">
+
+    <h1 style="text-align:center; font-family: Playfair Display; color: var(--accent);">
+        Bakım & Ritüel
+    </h1>
+
+    <p style="text-align:center; color: var(--text-muted); margin-bottom:40px;">
+        Mum yakmak bir ritüeldir.
     </p>
 
-    <div class="step">
-        <span>ADIM 01</span>
+    <div class="card">
         <h2>İlk Yakış</h2>
-        <p>Mumu ilk yaktığında yüzey tamamen sıvı hale gelene kadar söndürme.</p>
+        <p>Üst yüzey tamamen eriyene kadar söndürmeyin (2-3 saat).</p>
     </div>
 
-    <div class="step">
-        <span>ADIM 02</span>
-        <h2>Fitil Dengesi</h2>
-        <p>Her kullanım öncesi fitili 5 mm bırak. Temiz yanışın anahtarıdır.</p>
+    <div class="card">
+        <h2>Fitil</h2>
+        <p>Her kullanım öncesi 5mm kısaltın.</p>
     </div>
 
-    <div class="step">
-        <span>ADIM 03</span>
-        <h2>Aroma Alanı</h2>
-        <p>Küçük ve orta alanlarda kokunun yayılımı en ideal seviyededir.</p>
+    <div class="card">
+        <h2>Doğal Yapı</h2>
+        <p>Soya wax doğası gereği yüzeyde hafif doku bırakabilir.</p>
     </div>
 
-    <div class="step">
-        <span>ADIM 04</span>
-        <h2>Doğal Doku</h2>
-        <p>Soya wax doğaldır; yüzeydeki küçük değişimler saflığın işaretidir.</p>
-    </div>
-
-    <div class="warning">
-        <h3>Güvenlik</h3>
-        <p>
-            Yanan mumu gözetimsiz bırakma.  
-            Hava akımı olan alanlarda kullanma.  
-            Çocuklardan ve evcil hayvanlardan uzak tut.
-        </p>
-    </div>
-
-    <div class="back">
-        <a href="index.html">← Ana Sayfa</a>
+    <div class="card">
+        <h2>Güvenlik</h2>
+        <p>Gözetimsiz bırakmayın. 4 saatten uzun yakmayın.</p>
     </div>
 
 </div>
+
+<footer>
+    <span class="footer-logo">AVENDA HOME</span>
+    <p class="footer-text">Ritüel Deneyimi</p>
+</footer>
 
 </body>
 </html>
