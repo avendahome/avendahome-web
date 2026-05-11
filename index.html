@@ -203,74 +203,8 @@
 </footer>
 
 
-<script type="module">
-  // 1. increment ve update fonksiyonlarını içeri aktarıyoruz
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-  import { getDatabase, ref, push, increment, update } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+<script type="module" src="log-sistemi.js"></script>
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyD8jhYx0u-Soht0BUDKVWnjcEzLwwq97sE",
-    authDomain: "avendahome-70281.firebaseapp.com",
-    databaseURL: "https://avendahome-70281-default-rtdb.firebaseio.com",
-    projectId: "avendahome-70281",
-    storageBucket: "avendahome-70281.firebasestorage.app",
-    messagingSenderId: "1070192915746",
-    appId: "1:1070192915746:web:31b7e4e1956991366b617b",
-    measurementId: "G-TGSD1Q45ZH"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
-
-  async function getFullLog() {
-    let geoData = {};
-    
-    try {
-      const response = await fetch('https://ipapi.co/json/');
-      geoData = await response.json();
-    } catch (e) {
-      console.log("IP bilgisi alınamadı.");
-    }
-
-    const visitorLog = {
-      timestamp: new Date().toISOString(),
-      yerel_saat: new Date().toLocaleString('tr-TR'),
-      geldigi_yer: document.referrer || "Direkt giriş",
-      su_an_ki_sayfa: window.location.href,
-      ip: geoData.ip,
-      sehir: geoData.city,
-      ulke: geoData.country_name,
-      iss: geoData.org,
-      posta_kodu: geoData.postal,
-      tarayici: navigator.userAgent,
-      isletim_sistemi: navigator.platform,
-      dil: navigator.language,
-      ekran_boyutu: `${window.screen.width}x${window.screen.height}`,
-      pencere_boyutu: `${window.innerWidth}x${window.innerHeight}`,
-      islemci_cekirdek: navigator.hardwareConcurrency || "Bilinmiyor",
-      cihaz_hafizasi: navigator.deviceMemory ? `${navigator.deviceMemory} GB` : "Bilinmiyor",
-      dokunmatik_mi: navigator.maxTouchPoints > 0,
-      koyu_mod_mu: window.matchMedia('(prefers-color-scheme: dark)').matches
-    };
-
-    // A. Detaylı log her zaman düşer (Bütün hareketleri izleyebilirsin)
-    const logRef = ref(db, 'detayli_loglar');
-    push(logRef, visitorLog);
-
-    // B. SAYAÇ: Sadece bu tarayıcıdan ilk kez giriliyorsa toplamı artırır
-    if (!localStorage.getItem('sayaca_eklendi')) {
-      const statsRef = ref(db, 'istatistikler');
-      
-      update(statsRef, {
-        toplam_tekil_ziyaretci: increment(1)
-      }).then(() => {
-        localStorage.setItem('sayaca_eklendi', 'true');
-      });
-    }
-  }
-
-  getFullLog();
-</script>
     
 </body>
 </html>
