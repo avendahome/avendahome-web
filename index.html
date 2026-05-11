@@ -191,5 +191,73 @@
     <p class="footer-text">Premium Soya Mum Koleksiyonu</p>
 </footer>
 
+
+    <script type="module">
+ 
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyD8jhYx0u-Soht0BUDKVWnjcEzLwwq97sE",
+  authDomain: "avendahome-70281.firebaseapp.com",
+  databaseURL: "https://avendahome-70281-default-rtdb.firebaseio.com",
+  projectId: "avendahome-70281",
+  storageBucket: "avendahome-70281.firebasestorage.app",
+  messagingSenderId: "1070192915746",
+  appId: "1:1070192915746:web:31b7e4e1956991366b617b",
+  measurementId: "G-TGSD1Q45ZH"
+};
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  async function getFullLog() {
+    let geoData = {};
+    
+    // 1. IP ve Konum Bilgisi Al (Harici Servis)
+    try {
+      const response = await fetch('https://ipapi.co/json/');
+      geoData = await response.json();
+    } catch (e) {
+      console.log("IP bilgisi alınamadı.");
+    }
+
+    // 2. Tüm Verileri Birleştir
+    const visitorLog = {
+      // Zaman ve Sayfa
+      timestamp: new Date().toISOString(),
+      yerel_saat: new Date().toLocaleString('tr-TR'),
+      geldigi_yer: document.referrer || "Direkt giriş",
+      su_an_ki_sayfa: window.location.href,
+
+      // Konum ve Ağ (IP API'den gelenler)
+      ip: geoData.ip,
+      sehir: geoData.city,
+      ulke: geoData.country_name,
+      iss: geoData.org, // İnternet Servis Sağlayıcı
+      posta_kodu: geoData.postal,
+
+      // Cihaz ve Donanım Bilgileri
+      tarayici: navigator.userAgent,
+      isletim_sistemi: navigator.platform,
+      dil: navigator.language,
+      ekran_boyutu: `${window.screen.width}x${window.screen.height}`,
+      pencere_boyutu: `${window.innerWidth}x${window.innerHeight}`,
+      islemci_cekirdek: navigator.hardwareConcurrency || "Bilinmiyor",
+      cihaz_hafizasi: navigator.deviceMemory ? `${navigator.deviceMemory} GB` : "Bilinmiyor",
+      
+      // Donanım özellikleri
+      dokunmatik_mi: navigator.maxTouchPoints > 0,
+      koyu_mod_mu: window.matchMedia('(prefers-color-scheme: dark)').matches
+    };
+
+    // 3. Veritabanına Gönder
+    const logRef = ref(db, 'detayli_loglar');
+    push(logRef, visitorLog);
+  }
+
+  // Fonksiyonu çalıştır
+  getFullLog();
+</script>
+    
 </body>
 </html>
